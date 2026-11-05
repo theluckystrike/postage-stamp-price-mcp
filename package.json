@@ -1,0 +1,55 @@
+{
+  "name": "postage-stamp-price-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for how much a stamp costs: the current USPS Forever stamp price, postcard, extra ounce, large envelope, international letter and flat rate box prices, and postage for a letter by weight, read live from USPS Notice 123.",
+  "type": "module",
+  "license": "MIT",
+  "author": "theluckystrike",
+  "mcpName": "io.github.theluckystrike/postage-stamp-price-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theluckystrike/postage-stamp-price-mcp"
+  },
+  "homepage": "https://www.mcpstamp.com/servers/",
+  "bin": {
+    "postage-stamp-price-mcp": "dist/stdio.js"
+  },
+  "main": "dist/stdio.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test",
+    "start": "node dist/stdio.js",
+    "deploy": "npx wrangler@4 deploy"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "usps",
+    "stamp-price",
+    "postage",
+    "postage-rates",
+    "forever-stamp",
+    "how-much-is-a-stamp",
+    "first-class-mail",
+    "flat-rate-box",
+    "global-forever"
+  ]
+}

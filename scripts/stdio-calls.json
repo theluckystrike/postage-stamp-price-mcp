@@ -1,0 +1,6 @@
+[
+  ["get_stamp_price", {}],
+  ["calculate_letter_postage", { "weight_oz": 1.2, "nonmachinable": true, "quantity": 40 }],
+  ["calculate_letter_postage", { "destination": "Germany" }],
+  ["get_flat_rate_prices", {}]
+]
